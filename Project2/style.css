@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* To hide scroll bars caused by the video */
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 1; 
+    position: relative; 
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+     transform: scale(1.1);
+     background-color: rgb(80, 169, 241);
+
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.login-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.login-section p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.login-section button {
+    background: #3498db;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    form {
+        max-width: 100%;
+    }
+
+    button,
+    .login-section button {
+        font-size: 14px;
+    }
+}
